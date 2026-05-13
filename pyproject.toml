@@ -1,0 +1,48 @@
+[project]
+name = "nonebot-plugin-catcake"
+version = "1.0.0"
+description = "NoneBot2 plugin for querying and uploading catcake records"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Catcake Plugin Maintainers" }
+]
+keywords = ["nonebot", "nonebot2", "plugin", "catcake", "cat-cake"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: AsyncIO",
+  "Framework :: Pydantic",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Communications :: Chat",
+  "Typing :: Typed",
+]
+dependencies = [
+  "nonebot2>=2.2.0",
+  "nonebot-plugin-localstore>=0.7.0",
+  "httpx>=0.24.0",
+  "pydantic>=1.10.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/aa1x/nonebot_plugin_catcake_public"
+Repository = "https://github.com/aa1x/nonebot_plugin_catcake_public"
+Issues = "https://github.com/aa1x/nonebot_plugin_catcake_public/issues"
+API = "https://catcs.v6.army"
+
+[tool.setuptools]
+packages = ["nonebot_plugin_catcake"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+nonebot_plugin_catcake = ["py.typed"]
+
+[tool.nonebot]
+plugins = ["nonebot_plugin_catcake"]
