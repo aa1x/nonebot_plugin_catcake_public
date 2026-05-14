@@ -1,6 +1,6 @@
 # nonebot-plugin-catcake
 
-适用与 NoneBot2 的猫猫糕查询/上传插件，可用于查询 [`猫猫糕统计`](https://catcs.v6.army/) 提供的猫猫糕搜索与上传 API。
+适用与 NoneBot2 的猫猫糕查询＆上传插件,数据通过API与 [`猫猫糕统计`](https://catcs.v6.army/) 网站同步。
 
 
 ## 安装
