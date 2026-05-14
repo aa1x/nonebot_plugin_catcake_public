@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-catcake"
-version = "1.0.0"
+version = "1.0.2"
 description = "NoneBot2 plugin for querying and uploading catcake records"
 readme = "README.md"
 requires-python = ">=3.9"
