@@ -28,7 +28,7 @@ __plugin_meta__ = PluginMetadata(
         "- 上传阿基喵利 <UID>\n"
         "- 今日阿基喵利 <服务器>\n"
         "- 收录数量\n"
-        "- 设置\n"
+        "- 地点设置\n"
         "- cathelp"
     ),
     type="application",
@@ -203,7 +203,7 @@ def _settings_panel(event: Event) -> str:
     onoff = lambda v: "开" if v else "关"
     return (
         f"1.搜索时显示地点信息:{onoff(s['show_location'])}\n"
-        f"2.搜索时过滤无地点信息的数据:{onoff(s['filter_location'])}\n"
+        f"2.搜索时过滤无地点信息的UID:{onoff(s['filter_location'])}\n"
         f"3.上传时选择地点信息:{onoff(s['choose_location'])}\n"
         "您要更改哪一项呢？请发送1/2/3\n"
         "发送 0 退出设置"
@@ -214,7 +214,7 @@ upload_cmd = on_command("上传", priority=10, block=True)
 upload_aji_cmd = on_command("上传阿基喵利", priority=10, block=True)
 daily_cmd = on_command("今日阿基喵利", priority=10, block=True)
 count_cmd = on_command("收录数量", priority=10, block=True)
-setting_cmd = on_command("设置", priority=10, block=True)
+setting_cmd = on_command("地点设置", priority=10, block=True)
 help_cmd = on_command("cathelp", priority=10, block=True)
 
 
@@ -455,14 +455,13 @@ async def _(event: Event) -> None:
     await help_cmd.finish(
         _with_quote(
             event,
-            "指令说明：\n"
+            "指令：\n"
             "1) 搜索 <服务器> <猫糕名称>\n"
             "2) 上传 <UID> <猫糕1> <猫糕2> <猫糕3>\n"
             "3) 上传阿基喵利 <UID>\n"
             "4) 今日阿基喵利 <服务器>\n"
             "5) 收录数量\n"
-            "6) 设置\n"
-            "上传会按UID首位自动选择服务器：1=官服，5=B服\n"
+            "6) 地点设置\n"
             "查询服务器可用: 1=官服, 2=B服（默认官服）",
         )
     )
